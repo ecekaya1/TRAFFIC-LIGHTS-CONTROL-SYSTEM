@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1216.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proje.TrafficController">
+    <children>
+      <ImageView fitHeight="627.0" fitWidth="1207.0" layoutX="4.0" layoutY="2.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@trafik.jpg" />
+         </image>
+      </ImageView>
+        <Circle fx:id="aracIsik" fill="RED" layoutX="484.0" layoutY="73.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="yayaIsik" fill="GREEN" layoutX="945.0" layoutY="81.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <TextField fx:id="arac" layoutX="427.0" layoutY="472.0" promptText="Aracın plakasını giriniz..." />
+        <TextField fx:id="yaya" layoutX="872.0" layoutY="472.0" promptText="Yayanın yaşını giriniz..." />
+        <Button layoutX="481.0" layoutY="522.0" mnemonicParsing="false" onAction="#aracEkle" text="EKLE" />
+        <Button layoutX="925.0" layoutY="522.0" mnemonicParsing="false" onAction="#yayaEkle" text="EKLE" />
+        <Button fx:id="isikButon" layoutX="675.0" layoutY="61.0" mnemonicParsing="false" onAction="#isikButonKontrol" text="IŞIK KONTROL" />
+        <Label fx:id="goster" layoutX="145.0" layoutY="150.0" />
+        <ListView fx:id="bekleyen" layoutX="301.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="gecen" layoutX="507.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="bekleyenYayaList" layoutX="745.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="gecenYayaList" layoutX="947.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" />
+          <TableView fx:id="oncelikliAracTablo" layoutX="60.0" layoutY="319.0" prefHeight="231.0" prefWidth="171.0">
+              <columns>
+                  <TableColumn fx:id="oncelik" prefWidth="169.00003051757812" text="Öncelikli Araçlar" />
+              </columns>
+          </TableView>
+          <Button layoutX="60.0" layoutY="557.0" mnemonicParsing="false" onAction="#oncelikliAracGetir" text="GETİR" />
+          <Button layoutX="182.0" layoutY="557.0" mnemonicParsing="false" onAction="#oncelikliAracGecir" text="GEÇİR" />
+      <Label layoutX="331.0" layoutY="126.0" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #09018A; -fx-background-radius: 10;" text="BEKLEYEN ARAÇLAR" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="549.0" layoutY="126.0" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #09018A; -fx-background-radius: 10;" text="GEÇEN ARAÇLAR" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="988.0" layoutY="124.0" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #09018A; -fx-background-radius: 10;" text="GEÇEN YAYALAR" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="775.0" layoutY="124.0" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #09018A; -fx-background-radius: 10;" text="BEKLEYEN YAYALAR" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
